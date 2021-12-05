@@ -1,22 +1,35 @@
-import {StatusBar} from "expo-status-bar"
+import {
+  DefaultTheme as NavigationDefaultTheme,
+  DarkTheme as NavigationDarkTheme,
+} from "@react-navigation/native"
 import React from "react"
-import {StyleSheet, Text, View} from "react-native"
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  )
+import AsyncBootstrap from "./src/components/AsyncBootstrap"
+import {Routes} from "./src/navigation/routes"
+
+const fonts = {}
+
+const DefaultTheme = {
+  ...NavigationDefaultTheme,
+  colors: {
+    ...NavigationDefaultTheme.colors,
+  },
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+const DarkTheme = {
+  ...NavigationDarkTheme,
+  colors: {
+    ...NavigationDarkTheme.colors,
   },
+}
+export default function App() {
+  const [isDarkTheme, setIsDarkTheme] = React.useState(false)
 
-})
+  const globalTheme = isDarkTheme ? DarkTheme : DefaultTheme
+
+  return (
+    <AsyncBootstrap theme={globalTheme} {...{fonts}}>
+      <Routes />
+    </AsyncBootstrap>
+  )
+}

@@ -7,6 +7,17 @@
 
 > Simple boilerplate setting up all the boring shit I do everytime
 
+## Includes:
+
+- Typescript
+- Expo v43
+- React Navigation v6
+- Prettier
+- Eslint
+- Husky
+- Fit commit
+- Lint staged
+
 ## Install
 
 ```sh
@@ -23,13 +34,17 @@ yarn run start
 
 👤 **James Best**
 
-* Website: jamesbest.tech
-* Twitter: [@jimgbest](https://twitter.com/jimgbest)
-* Github: [@jim-at-jibba](https://github.com/jim-at-jibba)
+- Website: jamesbest.tech
+- Twitter: [@jimgbest](https://twitter.com/jimgbest)
+- Github: [@jim-at-jibba](https://github.com/jim-at-jibba)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+
+---
+
+
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

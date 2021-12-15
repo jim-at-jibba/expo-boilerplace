@@ -1,0 +1,26 @@
+export default {
+  black: "#000",
+  black20: "rgba(0, 0, 0, 0.2)",
+  black50: "rgba(0, 0, 0, 0.5)",
+  white: "#fff",
+  white0: "rgba(255, 255, 255, 0)",
+  white20: "rgba(255, 255, 255, 0.2)",
+  white50: "rgba(255, 255, 255, 0.5)",
+
+  accent: "#ff7043",
+  accentDark: "#c63f17",
+  accentLight: "#ffa270",
+  primary: "#8e24aa",
+  primaryDark: "#5c007a",
+  primaryLight: "#c158dc",
+  background: "#fff",
+  grey: "#c7c7c7",
+
+  textPrimary: "#212121",
+  placeholder: "rgba(55, 71, 79, 0.5)",
+  textAccent: "#212121",
+  titlePrimary: "#8e24aa",
+  error: "#FF7285",
+  warn: "#FFC06A",
+  success: "#4AD991",
+}

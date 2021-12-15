@@ -6,6 +6,8 @@ import React from "react"
 
 import AsyncBootstrap from "./src/components/AsyncBootstrap"
 import {Routes} from "./src/navigation/routes"
+import {ThemeProvider} from "./src/utils/styled-components"
+import {theme} from "./src/utils/theme"
 
 const fonts = {}
 
@@ -28,8 +30,10 @@ export default function App() {
   const globalTheme = isDarkTheme ? DarkTheme : DefaultTheme
 
   return (
-    <AsyncBootstrap theme={globalTheme} {...{fonts}}>
-      <Routes />
-    </AsyncBootstrap>
+    <ThemeProvider theme={theme}>
+      <AsyncBootstrap theme={globalTheme} {...{fonts}}>
+        <Routes />
+      </AsyncBootstrap>
+    </ThemeProvider>
   )
 }

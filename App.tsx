@@ -3,6 +3,7 @@ import {
   DarkTheme as NavigationDarkTheme,
 } from "@react-navigation/native"
 import React from "react"
+import {SafeAreaProvider} from "react-native-safe-area-context"
 
 import AsyncBootstrap from "./src/components/AsyncBootstrap"
 import {Routes} from "./src/navigation/routes"
@@ -31,9 +32,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AsyncBootstrap theme={globalTheme} {...{fonts}}>
-        <Routes />
-      </AsyncBootstrap>
+      <SafeAreaProvider>
+        <AsyncBootstrap theme={globalTheme} {...{fonts}}>
+          <Routes />
+        </AsyncBootstrap>
+      </SafeAreaProvider>
     </ThemeProvider>
   )
 }

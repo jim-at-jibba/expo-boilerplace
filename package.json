@@ -15,7 +15,8 @@
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prestorybook": "rnstl"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
@@ -64,6 +65,7 @@
     "jest-expo": "^44.0.1",
     "lint-staged": "^12.1.2",
     "prettier": "^2.5.1",
+    "react-native-storybook-loader": "^2.0.4",
     "ts-jest": "^27.1.2",
     "typescript": "~4.3.5"
   },
@@ -73,5 +75,15 @@
       "eslint --ext .js,.ts,.tsx,.jsx",
       "prettier --list-different"
     ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src",
+        "./packages"
+      ],
+      "pattern": "**/*.stories.tsx",
+      "outputFile": "./storybook/storyLoader.js"
+    }
   }
 }
